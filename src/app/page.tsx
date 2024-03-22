@@ -26,7 +26,7 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="sticky top-0 flex w-full items-center justify-between gap-2 border-b-2 bg-gray-50 px-6 py-4">
+    <header className="sticky top-0 z-50 flex w-full items-center justify-between gap-2 border-b-2 bg-gray-50 px-6 py-4">
       <h1 className="text-2xl font-bold">RMB</h1>
       <DynamicWalletButtons />
     </header>
