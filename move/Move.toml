@@ -1,0 +1,38 @@
+# [package]
+# name = "raffle"
+# version = "1.0.0"
+# upgrade_policy = "compatible"
+
+# [addresses]
+# std = "0x1"
+# aptos_std = "0x1"
+# aptos_framework = "0x1"
+# aptogotchi = "0x35a3e49aa759f2e9ea60b37baabe1e791bbb1d07c41d16c3ac27675df87577b9"
+# raffle = "0x35a3e49aa759f2e9ea60b37baabe1e791bbb1d07c41d16c3ac27675df87577b9"
+
+
+# [dependencies]
+# AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "randomnet", subdir = "aptos-move/framework/aptos-framework" }
+# AptosTokenObjects = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "randomnet", subdir = "aptos-move/framework/aptos-token-objects" }
+
+# # For use when developing and testing this module
+# [dev-addresses]
+# aptogotchi = "0x100"
+# raffle = "0x100"
+
+
+
+[package]
+name = "raffle"
+version = "0.0.1"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "randomnet", subdir = "aptos-move/framework/aptos-framework" }
+AptosTokenObjects = { git = "https://github.com/aptos-labs/aptos-core.git", rev = "randomnet", subdir = "aptos-move/framework/aptos-token-objects" }
+
+
+[addresses]
+# std = "0x1"
+# aptos_std = "0x1"
+# aptos_framework = "0x1"
+raffle = "0x35a3e49aa759f2e9ea60b37baabe1e791bbb1d07c41d16c3ac27675df87577b9"

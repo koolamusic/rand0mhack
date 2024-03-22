@@ -1,0 +1,8 @@
+---
+profiles:
+  randomnet_profile:
+    private_key: "0xe2c22c09a9d852461cfe366c581d17654651f004c16e288b81665d77c0872d0e"
+    public_key: "0xdac81446a50c8dc0b04a5336c0ca0cd7186429856b1910adf3267fde7061459a"
+    account: 35a3e49aa759f2e9ea60b37baabe1e791bbb1d07c41d16c3ac27675df87577b9
+    rest_url: "https://fullnode.random.aptoslabs.com/"
+    faucet_url: "https://faucet.random.aptoslabs.com/"
