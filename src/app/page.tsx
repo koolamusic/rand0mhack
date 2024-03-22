@@ -6,6 +6,7 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { Connected } from "@/components/Home/Connected";
 import { NotConnected } from "@/components/Home/NotConnected";
 import { WalletButtons } from "@/components/WalletButtons";
+import { QuestCategory } from "./_components/quest-category";
 
 const FixedSizeWrapper = ({ children }: PropsWithChildren) => {
   const fixedStyle = {
@@ -34,18 +35,17 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      <FixedSizeWrapper>
-        <Header />
-        {connected ? <Connected /> : <NotConnected />}
-      </FixedSizeWrapper>
+      <Header />
+      <QuestCategory />
+      {/* {connected ? <Connected /> : <NotConnected />} */}
     </main>
   );
 }
 
 function Header() {
   return (
-    <header className="sticky top-0 flex justify-between items-center px-6 py-4 bg-gradient-to-r from-orange-300 via-orange-400 to-red-400 shadow-md w-full gap-2">
-      <h1 className="text-2xl">Aptogotchi</h1>
+    <header className="sticky top-0 flex w-full items-center justify-between gap-2  border-b-2 bg-gray-50 px-6 py-4">
+      <h1 className="text-2xl font-bold">RMB</h1>
       <DynamicWalletButtons />
     </header>
   );
@@ -57,10 +57,10 @@ const DynamicWalletButtons = dynamic(
   },
   {
     loading: () => (
-      <div className="nes-btn is-primary opacity-50 cursor-not-allowed">
+      <div className="nes-btn is-primary cursor-not-allowed opacity-50">
         Loading...
       </div>
     ),
     ssr: false,
-  }
+  },
 );

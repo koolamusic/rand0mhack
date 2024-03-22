@@ -3,11 +3,11 @@ import { WalletProvider } from "@/context/WalletProvider";
 
 import type { Metadata } from "next";
 
-import { Inter } from "next/font/google";
+import { Saira } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
 
-const inter = Inter({
+const inter = Saira({
   subsets: ["latin"],
   variable: "--font-sans",
 });

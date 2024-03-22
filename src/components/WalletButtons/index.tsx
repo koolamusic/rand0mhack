@@ -18,7 +18,8 @@ export const WalletButtons = () => {
     return (
       <div className="flex flex-row">
         <div
-          className={cn(buttonStyles, "btn-small hover:bg-blue-700")}
+          className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          // className={cn(buttonStyles, "btn-small hover:bg-blue-700")}
           onClick={disconnect}
         >
           Disconnect
@@ -69,7 +70,8 @@ const WalletView = ({ wallet }: { wallet: Wallet }) => {
     if (mobileSupport) {
       return (
         <button
-          className={cn(buttonStyles, "hover:bg-blue-700")}
+          className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          // className={cn(buttonStyles, "hover:bg-blue-700")}
           disabled={false}
           key={wallet.name}
           onClick={() => onWalletConnectRequest(wallet.name)}
@@ -82,7 +84,8 @@ const WalletView = ({ wallet }: { wallet: Wallet }) => {
     // wallet does not have mobile app
     return (
       <button
-        className={cn(buttonStyles, "cursor-not-allowed opacity-50")}
+        // className={cn(buttonStyles, "cursor-not-allowed opacity-50")}
+        className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         disabled={true}
         key={wallet.name}
         style={{ maxWidth: "300px" }}
@@ -94,8 +97,10 @@ const WalletView = ({ wallet }: { wallet: Wallet }) => {
     // desktop
     return (
       <button
+        // className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+
         className={cn(
-          buttonStyles,
+          "relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
           isWalletReady ? "hover:bg-blue-700" : "cursor-not-allowed opacity-50",
         )}
         disabled={!isWalletReady}
