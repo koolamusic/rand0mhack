@@ -8,28 +8,7 @@ import { NotConnected } from "@/components/Home/NotConnected";
 import { WalletButtons } from "@/components/WalletButtons";
 import { QuestCategory } from "./_components/quest-category";
 import CategoryCTA from "./_components/category-cta";
-
-const FixedSizeWrapper = ({ children }: PropsWithChildren) => {
-  const fixedStyle = {
-    width: "1200px",
-    height: "800px",
-    border: "6px solid",
-    margin: "auto",
-  };
-
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <div style={fixedStyle}>{children}</div>
-    </div>
-  );
-};
+import { LandingHero } from "./_components/landing-hero";
 
 export default function Home() {
   const { connected } = useWallet();
@@ -37,6 +16,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Header />
+      <LandingHero />
       <QuestCategory />
       <CategoryCTA />
       {/* {connected ? <Connected /> : <NotConnected />} */}
