@@ -9,6 +9,7 @@ import { WalletButtons } from "@/components/WalletButtons";
 import { QuestCategory } from "./_components/quest-category";
 import CategoryCTA from "./_components/category-cta";
 import { LandingHero } from "./_components/landing-hero";
+import { UpcomingQuest } from "./_components/upcoming";
 
 export default function Home() {
   const { connected } = useWallet();
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="flex flex-col">
       <Header />
       <LandingHero />
+      <UpcomingQuest />
       <QuestCategory />
       <CategoryCTA />
       {/* {connected ? <Connected /> : <NotConnected />} */}

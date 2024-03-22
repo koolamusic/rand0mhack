@@ -59,11 +59,12 @@ export function LandingHero() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               AI powered incentive platform that empowers YOU to earn rewards
-              for using your favorite blockchain networks.
+              for interacting with the Aptos blockchain. Holding tokens and
+              performing on-chain transactions.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
-                href="#"
+                href="#questhome"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Explore Quests
