@@ -7,6 +7,7 @@ import { Connected } from "@/components/Home/Connected";
 import { NotConnected } from "@/components/Home/NotConnected";
 import { WalletButtons } from "@/components/WalletButtons";
 import { QuestCategory } from "./_components/quest-category";
+import CategoryCTA from "./_components/category-cta";
 
 const FixedSizeWrapper = ({ children }: PropsWithChildren) => {
   const fixedStyle = {
@@ -37,6 +38,7 @@ export default function Home() {
     <main className="flex flex-col">
       <Header />
       <QuestCategory />
+      <CategoryCTA />
       {/* {connected ? <Connected /> : <NotConnected />} */}
     </main>
   );
@@ -44,7 +46,7 @@ export default function Home() {
 
 function Header() {
   return (
-    <header className="sticky top-0 flex w-full items-center justify-between gap-2  border-b-2 bg-gray-50 px-6 py-4">
+    <header className="sticky top-0 flex w-full items-center justify-between gap-2 border-b-2 bg-gray-50 px-6 py-4">
       <h1 className="text-2xl font-bold">RMB</h1>
       <DynamicWalletButtons />
     </header>
