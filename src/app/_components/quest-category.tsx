@@ -1,8 +1,8 @@
 const callouts = [
   {
-    name: "Stake the Block",
+    name: "Predict the Block",
     description:
-      "Earn rewards by holding a token, NFT or performing transactions on-chain",
+      "Earn rewards by predicting the outcome from any given block versions",
     imageSrc: "/app/block-quest.webp",
     imageAlt: "challenges by the block and transactions on aptos",
     href: "#",

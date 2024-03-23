@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { PropsWithChildren } from "react";
+import { Fragment, PropsWithChildren } from "react";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { Connected } from "@/components/Home/Connected";
 import { NotConnected } from "@/components/Home/NotConnected";
@@ -18,10 +18,15 @@ export default function Home() {
     <main className="flex flex-col">
       <Header />
       <LandingHero />
-      <UpcomingQuest />
-      <QuestCategory />
+      {connected ? (
+        <section>
+          <UpcomingQuest />
+          <QuestCategory />
+        </section>
+      ) : (
+        <Fragment />
+      )}
       <CategoryCTA />
-      {/* {connected ? <Connected /> : <NotConnected />} */}
     </main>
   );
 }

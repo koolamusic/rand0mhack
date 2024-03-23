@@ -74,6 +74,7 @@ export function UpcomingTable() {
               </p>
               <p
                 className={classNames(
+                  // @ts-expect-error is a project status
                   statuses[project.status],
                   "mt-0.5 whitespace-nowrap rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset",
                 )}
@@ -97,9 +98,9 @@ export function UpcomingTable() {
               href={project.href}
               className="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:block"
             >
-              View project<span className="sr-only">, {project.name}</span>
+              Claim<span className="sr-only">, {project.name}</span>
             </a>
-            <Menu as="div" className="relative flex-none">
+            {/* <Menu as="div" className="relative flex-none">
               <Menu.Button className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
                 <span className="sr-only">Open options</span>
                 <EllipsisVerticalIcon className="h-5 w-5" aria-hidden="true" />
@@ -155,7 +156,7 @@ export function UpcomingTable() {
                   </Menu.Item>
                 </Menu.Items>
               </Transition>
-            </Menu>
+            </Menu> */}
           </div>
         </li>
       ))}
